@@ -1,0 +1,53 @@
+.light-blue {
+	@include d('c') { color: $light-blue; }
+	@include d('bg') { background-color: $light-blue; }
+	@include d('bd') { border-color: $light-blue; }
+}
+.blue {
+	@include d('c') { color: $blue; }
+	@include d('bg') { background-color: $blue; }
+	@include d('bd') { border-color: $blue; }
+}
+.lighter-grey {
+	@include d('c') { color: $lighter-grey; }
+	@include d('bg') { background-color: $lighter-grey; }
+	@include d('bd') { border-color: $lighter-grey; }
+}
+.light-grey {
+	@include d('c') { color: $light-grey; }
+	@include d('bg') { background-color: $light-grey; }
+	@include d('bd') { border-color: $light-grey; }
+}
+.grey {
+	@include d('c') { color: $grey; }
+	@include d('bg') { background-color: $grey; }
+	@include d('bd') { border-color: $grey; }
+}
+.dark-grey {
+	@include d('c') { color: $dark-grey; }
+	@include d('bg') { background-color: $dark-grey; }
+	@include d('bd') { border-color: $dark-grey; }
+}
+body {
+	color: $dark-grey;
+}
+.social-icon {
+	color: $grey;
+}
+.top-header {
+	&,
+	&-icon { color: $light-grey; }
+	&-link { color: $blue; }
+	@include respond-to('xs') {
+		&-mobile { border-bottom-color: $lighter-grey; }
+		&-menu-toggle { color: $blue; }
+	}
+	@include respond-to('sm-p') {
+		&-sm-p { border-bottom-color: $lighter-grey; }
+	}
+}
+.aside {
+	@include respond-to('xs') {
+		background-color: $blue;
+	}
+}

@@ -1,0 +1,12 @@
+.site-wrapper {
+	@include respond-to('xs') {
+		padding-left: $c;
+		padding-right: $c;
+		padding-top: 150px;
+	}
+	@include respond-to('sm-p') {
+		padding-left: 2*$c + 200px + 2*$c;
+		padding-right: 2*$c;
+		padding-top: 35px;
+	}
+}
