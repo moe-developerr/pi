@@ -16,6 +16,18 @@
 	vertical-align: middle;
 }
 
+.fz {
+	&-12 { font-size: 12px; }
+	&-14 { font-size: 14px; }
+	&-16 { font-size: 16px; }
+}
+
+.lh {
+	&-1 { line-height: 1; }
+	&-1-5 { line-height: 1.5; }
+	&-2 { line-height: 2; }
+}
+
 .m {
 	@include d('5') { margin: $sm-c; }
 	@include d('r5') { margin-right: $sm-c; }
@@ -44,8 +56,8 @@
 
 .hidden {
 	@include d('xs') { @include respond-to('xs') { display: none; } }
-	@include d('sm-p') { @include respond-to('sm-p') { display: none; } }
-	@include d('upto-md') { @include respond-to('upto-md') { display: none; } }
+	@include d('smp') { @include respond-to('sm-p') { display: none; } }
+	@include d('uptomd') { @include respond-to('upto-md') { display: none; } }
 }
 
 .center-ib-content {
@@ -55,4 +67,10 @@
 		height: 100%;
 		vertical-align: middle;
 	}
+}
+
+.text {
+	&-right { text-align: right; }
+	&-left { text-align: left; }
+	&-center { text-align: center; }
 }

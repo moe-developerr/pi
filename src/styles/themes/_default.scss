@@ -1,3 +1,8 @@
+.white {
+	@include d('c') { color: $white; }
+	@include d('bg') { background-color: $white; }
+	@include d('bd') { border-color: $white; }
+}
 .light-blue {
 	@include d('c') { color: $light-blue; }
 	@include d('bg') { background-color: $light-blue; }
@@ -39,7 +44,7 @@ body {
 	&-icon { color: $light-grey; }
 	&-link { color: $blue; }
 	@include respond-to('xs') {
-		&-mobile { border-bottom-color: $lighter-grey; }
+		&-xs { border-bottom-color: $lighter-grey; }
 		&-menu-toggle { color: $blue; }
 	}
 	@include respond-to('sm-p') {
@@ -49,5 +54,80 @@ body {
 .aside {
 	@include respond-to('xs') {
 		background-color: $blue;
+		&-social-icons {
+			.social-icon { color: $white; }
+		}
+	}
+	@include respond-to('sm-p') {
+		&-language-bar-smp {
+			border-bottom-color: $blue;
+			.aside-language-bar-link {
+				color: $light-grey;
+				&.selected,
+				&:hover { color: $blue; }
+			}
+		}
+	}
+}
+.main-menu {
+	text-transform: uppercase;
+	@include respond-to('xs') {
+		&-language-link {
+			border-bottom-color: $lighter-blue;
+			color: $lighter-blue;
+			&:hover,
+			&.selected {
+				color: $white;
+			}
+		}
+		&-link,
+		&-sublink {
+			color: $white;
+			border-bottom-color: $lighter-blue;
+		}
+		&-link:hover,
+		&-link.selected {
+			background-color: $white;
+			color: $blue;
+		}
+		&-sublink:hover,
+		&-sublink.selected {
+			background-color: $light-blue;
+		}
+		&-item {
+			&.selected {
+				.main-menu-link {
+					background-color: $white;
+					color: $blue;
+				}
+			}
+		}
+	}
+	@include respond-to('sm-p') {
+		&-link,
+		&-sublink {
+			border-bottom-color: $lighter-grey;
+			color: $dark-grey;
+			&:hover,
+			&.selected {
+				color: $white;
+			}
+		}
+		&-link:hover,
+		&-link.selected {
+			background-color: $blue;
+		}
+		&-sublink:hover,
+		&-sublink.selected {
+			background-color: $grey;
+		}
+		&-item {
+			&.selected {
+				.main-menu-link {
+					background-color: $blue;
+					color: $white;
+				}
+			}
+		}
 	}
 }

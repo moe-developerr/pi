@@ -1,7 +1,7 @@
 <header class="top-header">
 	<div class="top-header-smp clearfix">
 		<div class="top-header-left">
-			<span class="hidden-upto-md m-r15">La Diva Bldg., Hazmieh, Mark Takla, Beirut - Lebanon</span>
+			<span class="hidden-uptomd m-r15">La Diva Bldg., Hazmieh, Mark Takla, Beirut - Lebanon</span>
 			<a href="#" class="top-header-link">
 				<i class="fa fa-map-marker" aria-hidden="true"></i>
 				<span>Directions</span>
