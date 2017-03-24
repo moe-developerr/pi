@@ -6,6 +6,11 @@
 // vendors
 @import
 	'./vendors/font-awesome',
+	'./vendors/selectric',
+	'./vendors/jquery-ui',
+	'./vendors/rs-default',
+	'./vendors/royalslider',
+	'./vendors/perfect-scrollbar',
 	'./vendors/normalize';
 
 // base
@@ -25,11 +30,10 @@
 @import
 	'./components/social-icons',
 	'./components/main-menu',
-	'./components/find-your-home',
-	'./components/loan-calculator',
-	'./components/newsletter',
-	'./components/full-height-slider',
-	'./components/visible-nearby-slider',
+	'./components/component',
+	'./components/select',
+	'./components/slider-range',
+	'./components/slider',
 	'./components/line-through-title';
 
 // themes

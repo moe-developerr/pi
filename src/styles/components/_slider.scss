@@ -1,0 +1,98 @@
+.slider.light-arrows.rsHor .rsArrow .rsArrowIcn {
+	&:before,
+	&:after {
+		background-color: $white;
+	}
+}
+.slider.dark-arrows.rsHor .rsArrow .rsArrowIcn {
+	&:before,
+	&:after {
+		background-color: $grey;
+	}
+}
+.slider {
+
+	@include respond-to('xs') {
+		height: 300px;
+	}
+
+	@include respond-to('sm-p') {
+		height: 500px;
+		margin-bottom: 30px;
+	}
+
+	&,
+	& .rsOverflow,
+	& .rsSlide,
+	& .rsVideoFrameHolder,
+	& .rsThumbs {
+		background-color: $white;
+	}
+
+	&.rsHor .rsArrow .rsArrowIcn {
+		width: 70px;
+		height: 70px;
+		margin-top: -35px;
+		background: none;
+		&:before,
+		&:after {
+			content: '';
+			width: 2px;
+			height: 40px;
+			display: block;
+			position: absolute;
+			top: 50%;
+		}
+	}
+	&.rsHor .rsArrowLeft .rsArrowIcn {
+		margin-left: -22px;
+		&:before {
+			transform: rotate(-45deg) translate(39px, 28px);
+		}
+		&:after {
+			transform: rotate(45deg) translate(8px, -58px);
+		}
+	}
+	&.rsHor .rsArrowRight .rsArrowIcn {
+		margin-left: -48px;
+		&:before {
+			transform: rotate(-45deg) translate(38px, -11px);
+		}
+		&:after {
+			transform: rotate(45deg) translate(9px, -18px);
+		}
+	}
+}
+
+.visible-nearby-slider {
+	.rsImg {
+		width: 100% !important;
+	}
+	.slide {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 20px;
+		background-color: $lighter-grey;
+		text-align: center;
+	}
+	.content {
+		padding: 20px;
+		background-color: lighten($lighter-blue, 30%);
+	}
+	.slide-title {
+		color: $blue;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		font-size: 20px;
+	}
+	.slide-text {
+		font-size: 14px;
+	}
+	.rsSlide {
+		transition: opacity 1s;
+		opacity: .3;
+		&.rsActiveSlide {
+			opacity: 1;
+		}
+	}
+}

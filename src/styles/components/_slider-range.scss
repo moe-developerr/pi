@@ -1,0 +1,33 @@
+.slider-range {
+	height: 5px;
+	.ui-slider-handle {
+		border-radius: 50%;
+		width: 13px;
+		height: 13px;
+		top: -4px;
+		&.ui-state-active {
+			background-color: $lighter-blue;
+			outline: none;
+			border: none;
+		}
+		&.ui-state-focus {
+			border: none;
+			outline: none;
+		}
+	}
+	&.ui-widget-content {
+		background-color: $lighter-blue;
+		border: none;
+	}
+}
+.slider-range-start,
+.slider-range-end {
+	color: $light-blue-l-10;
+	display: inline-block;
+	margin-top: 10px;
+	min-height: 13px;
+}
+
+.slider-range-end {
+	float: right;
+}

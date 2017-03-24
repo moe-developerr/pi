@@ -8,6 +8,11 @@
 	@include d('bg') { background-color: $light-blue; }
 	@include d('bd') { border-color: $light-blue; }
 }
+.light-blue-l-10 {
+	@include d('c') { color: $light-blue-l-10; }
+	@include d('bg') { background-color: $light-blue-l-10; }
+	@include d('bd') { border-color: $light-blue-l-10; }
+}
 .blue {
 	@include d('c') { color: $blue; }
 	@include d('bg') { background-color: $blue; }
@@ -38,6 +43,11 @@ body {
 }
 .social-icon {
 	color: $grey;
+	&.fa-facebook:hover { color: #3b5998; }
+	&.fa-twitter:hover { color: #1da1f2; }
+	&.fa-google-plus:hover { color: #e53935; }
+	&.fa-pinterest:hover { color: #bd081c; }
+	&.fa-youtube:hover { color: #cc181e; }
 }
 .top-header {
 	&,
@@ -92,7 +102,7 @@ body {
 		}
 		&-sublink:hover,
 		&-sublink.selected {
-			background-color: $light-blue;
+			background-color: $lighter-blue;
 		}
 		&-item {
 			&.selected {

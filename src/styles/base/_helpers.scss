@@ -20,6 +20,7 @@
 	&-12 { font-size: 12px; }
 	&-14 { font-size: 14px; }
 	&-16 { font-size: 16px; }
+	&-25 { font-size: 25px; }
 }
 
 .lh {
@@ -34,6 +35,14 @@
 	@include d('l5') { margin-left: $sm-c; }
 	@include d('t5') { margin-top: $sm-c; }
 	@include d('b5') { margin-bottom: $sm-c; }
+	
+	@include d('10') { margin: 2*$sm-c; }
+	@include d('r10') { margin-right: 2*$sm-c; }
+	@include d('l10') { margin-left: 2*$sm-c; }
+	@include d('t10') { margin-top: 2*$sm-c; }
+	@include d('b10') { margin-bottom: 2*$sm-c; }
+
+
 	@include d('15') { margin: $c; }
 	@include d('r15') { margin-right: $c; }
 	@include d('l15') { margin-left: $c; }
@@ -47,11 +56,32 @@
 	@include d('l5') { padding-left: $sm-c; }
 	@include d('t5') { padding-top: $sm-c; }
 	@include d('b5') { padding-bottom: $sm-c; }
+
+	@include d('b10') { padding-bottom: 2*$sm-c; }
+	@include d('r10') { padding-right: 2*$sm-c; }
+	@include d('l10') { padding-left: 2*$sm-c; }
+	@include d('t10') { padding-top: 2*$sm-c; }
+	@include d('b10') { padding-bottom: 2*$sm-c; }
+
 	@include d('15') { padding: $c; }
 	@include d('r15') { padding-right: $c; }
 	@include d('l15') { padding-left: $c; }
 	@include d('t15') { padding-top: $c; }
 	@include d('b15') { padding-bottom: $c; }
+}
+
+.zero {
+	@include d('m') { margin: 0; }
+	@include d('mt') { margin-top: 0; }
+	@include d('mb') { margin-bottom: 0; }
+	@include d('ml') { margin-left: 0; }
+	@include d('mr') { margin-right: 0; }
+
+	@include d('p') { padding: 0; }
+	@include d('pt') { padding-top: 0; }
+	@include d('pb') { padding-bottom: 0; }
+	@include d('pl') { padding-left: 0; }
+	@include d('pr') { padding-right: 0; }
 }
 
 .hidden {

@@ -14,8 +14,33 @@ h4,
 h5,
 h6 {
 	font-family: $heading-ff;
+	font-weight: 400;
 }
 
 a {
 	text-decoration: none;
+}
+
+.title {
+	color: $blue;
+	text-align: center;
+	@include respond-to('xs') {
+		font-size: 20px;
+	}
+	@include respond-to('sm-p') {
+		font-size: 25px;
+	}
+}
+
+.subtitle {
+	font-family: $heading-ff;
+	margin-top: 5px;
+	text-align: center;
+	font-weight: 400;
+	@include respond-to('xs') {
+		font-size: 15px;
+	}
+	@include respond-to('sm-p') {
+		font-size: 18px;
+	}
 }

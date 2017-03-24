@@ -1,0 +1,41 @@
+.line-through-title {
+	position: relative;
+	text-align: center;
+	margin-top: 50px;
+
+	.line {
+		border-top: none;
+		border-bottom-color: $lighter-grey;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+	}
+
+	.titles {
+		display: inline-block;
+		background-color: $white;
+		position: relative;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	@include respond-to('xs') {
+		&.margin-bot { margin-bottom: 30px; }
+	}
+
+	@include respond-to('sm-p') {
+		&.margin-bot { margin-bottom: 50px; }
+	}
+}
+
+.centered-text {
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	line-height: 1.7;
+
+	@include respond-to('xs') {
+		padding: 0;
+	}
+}
