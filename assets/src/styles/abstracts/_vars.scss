@@ -1,0 +1,39 @@
+// screen sizes
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+
+// fonts
+$body-ff: 'Raleway', sans-serif;
+$heading-ff: 'Pacifico', cursive;
+
+$body-fz: 16px;
+$md-fz: 14px;
+$sm-fz: 12px;
+
+// colors
+$lighter-grey: #ced0d1;
+$lighter-grey-l-10: lighten($lighter-grey, 10%);
+$light-grey: #959a9d;
+$grey: #8e9193;
+$dark-grey: #686868;
+
+$lighter-blue: #5a6ca2;
+$lighter-blue-l-10: lighten($lighter-blue, 10%);
+$light-blue: #9db3f5;
+$light-blue-l-10: lighten($light-blue, 10%);
+$blue: #233b83;
+
+$white: #fff;
+
+$black: #000;
+
+// constant
+$sm-c: 5px;
+$c: 15px;
+
+// transition
+$slow-transition: .6s;

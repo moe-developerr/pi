@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	<div class="top-header-xs">
-		<div class="top-header-logo center-ib-content"><img src="/src/images/logo.png" alt="" class="img-responsive"></div>
-		<div class="top-header-menu-toggle center-ib-content"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<div class="top-header-logo center-ib-content"><img src="/assets/images/logo.png" alt="" class="img-responsive"></div>
+		<div class="aside-show center-ib-content"><i class="fa fa-bars" aria-hidden="true"></i></div>
 	</div>
 </header>

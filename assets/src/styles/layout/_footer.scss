@@ -1,0 +1,39 @@
+.footer {
+
+	&-bottom {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		border-top: 1px solid $lighter-grey;
+	}
+
+	@include respond-to('xs') {
+		&-social-icons {
+			float: right;
+		}
+		
+		.copyrights {
+			float: left;
+			margin-bottom: $c;
+		}
+
+		&-bottom {
+			margin-top: 20px;
+		}
+
+		.components-container {
+			background-color: $blue;
+			padding: 10px 10px 20px 10px;
+			.component-header {
+				margin: 0 10px;
+				color: $white;
+				border-bottom-color: $white;
+			}
+		}
+	}
+	@include respond-to('sm-p') {
+		.copyrights { text-align: center; }
+		&-social-icons { display: none; }
+		
+		.component { display: none; }
+	}
+}

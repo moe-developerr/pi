@@ -1,0 +1,97 @@
+.component {
+	color: $blue;
+	font-size: $md-fz;
+
+	&-title {
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	&-submit {
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	&-header {
+		height: 35px;
+		line-height: 35px;
+		border-bottom: 1px solid $blue;
+		cursor: pointer;
+		@extend .clearfix;
+
+		.component-title { float: left; }
+		.component-icon { float: right; }
+	}
+
+	&-footer {
+		text-align: right;
+		color: $white;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		&.component-item { margin: 0; }
+		&-icon {
+			font-size: 18px;
+			margin-left: 5px;
+		}
+	}
+	
+	&-element-border-top {
+		border-top: 1px solid $light-blue-l-10;
+	}
+	
+	&-element-border-bottom {
+		border-bottom: 1px solid $light-blue-l-10;
+	}
+
+	&.active {
+		.show-icon { display: none; }
+		.hide-icon { display: block; }
+		.component-header {  }
+		.component-list { display: block; }
+	}
+
+	&-list {
+		list-style-type: none;
+		padding-left: 0;
+		background-color: $blue;
+		padding: 10px;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: $sm-fz;
+	}
+	&-item {
+		margin-bottom: 15px;
+	}
+	&-label {
+		color: $white;
+		display: block;
+		margin-bottom: 10px;
+	}
+	.hide-icon,
+	&-list{ display: none; }
+
+	&-icon {
+		float: right;
+		font-size: 18px;
+	}
+
+	@include respond-to('xs') {
+		.aside & { display: none; }
+	}
+	@include respond-to('sm-p') {
+
+	}
+}
+
+.component-input {
+	@extend .component-element-border;
+	background-color: transparent;
+	color: $light-blue-l-10;
+	width: 100%;
+	&:focus { outline: none; }
+}
+
+.component-element-border {
+	border: none;
+	border-bottom: 1px solid $light-blue-l-10;
+}

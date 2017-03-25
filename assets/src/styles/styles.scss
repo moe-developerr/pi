@@ -1,0 +1,24 @@
+// abstracts
+@import 
+	'abstracts/vars',
+	'abstracts/mixins';
+
+// vendors
+@import
+	'./vendors/**/*.scss';
+
+// base
+@import
+	'./base/**/*.scss';
+
+// layout
+@import
+	'./layout/**/*.scss';
+
+// components
+@import
+	'./components/**/*.scss';
+
+// themes
+@import
+	'./themes/**/*.scss';
