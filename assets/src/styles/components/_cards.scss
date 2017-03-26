@@ -1,0 +1,56 @@
+.cards {
+	text-align: center;
+	.card-wrapper {
+		display: inline-block;
+		@include respond-to('md') {
+			float: left;
+			width: 50%;
+			padding-right: 20px;
+			&:nth-child(2n) { padding-right: 0; }
+		}
+		@include respond-to('lg') {
+			float: left;
+			width: 33.33%;
+			padding-right: 20px;
+			&:last-child { padding-right: 0; }
+		}
+	}
+	.card {
+		display: block;
+		padding: 20px;
+		background-color: $lighter-grey-l-10;
+		min-height: 450px;
+		color: $dark-grey;
+		margin-bottom: 2*$c;
+		
+		&-image-wrapper {
+			margin-bottom: 20px;
+			height: 230px;
+			background-size: cover;
+			background-position: center;
+		}
+
+		&-text-wrapper {
+			text-align: center;
+			word-break: break-word;
+		}
+
+		&-title,
+		&-subtitle {
+			color: $blue;
+			font-weight: 600;
+		}
+
+		&-title {
+			font-size: $h3-fz;
+		}
+
+		@include respond-to('xs') {
+
+		}
+
+		@include respond-to('sm-p') {
+			
+		}
+	}
+}

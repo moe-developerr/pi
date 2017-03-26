@@ -1,15 +1,23 @@
 .component {
 	color: $blue;
-	font-size: $md-fz;
 
 	&-title {
 		font-weight: 700;
 		text-transform: uppercase;
 	}
 
+	.feedback {
+		color: $white;
+	}
+
 	&-submit {
 		display: inline-block;
 		cursor: pointer;
+		background: none;
+		border: none;
+		outline: none;
+		color: $white;
+		&[disabled] { color: $lighter-blue-l-10; }
 	}
 
 	&-header {

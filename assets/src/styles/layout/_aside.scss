@@ -54,8 +54,8 @@
 			&.selected { font-weight: 700; }
 		}
 		&-logo {
-			padding-top: $c;
-			padding-bottom: $c;
+			padding-top: 2*$sm-c;
+			padding-bottom: 4*$sm-c;
 			text-align: center;
 		}
 		&-social-icons { display: none; }

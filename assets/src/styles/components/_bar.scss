@@ -1,0 +1,33 @@
+.bar {
+	border-top: 1px solid $lighter-blue;
+	border-bottom: 1px solid $lighter-blue;
+	height: 30px;
+	line-height: 30px;
+
+	.bar-left,
+	.social-icons-label,
+	.social-icons {
+		float: left;
+	}
+
+	.social-icons-label,
+	&-link {
+		font-weight: 600;
+	}
+
+	.social-icons-label {
+		color: $blue;
+		margin-right: $c;
+	}
+
+	&-link {
+		color: $blue;
+		transition: color $slow-transition;
+
+		&:hover { color: $blue-l-10; }
+	}
+
+	.bar-right {
+		float: right;
+	}
+}

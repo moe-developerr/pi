@@ -1,0 +1,5 @@
+.main {
+	@include respond-to('sm-p') {
+		padding-top: 10px;
+	}
+}

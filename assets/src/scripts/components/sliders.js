@@ -4,7 +4,7 @@
   var $defaultSlider = $('.default-slider');
   var fullHeightSlider = null;
   var debounceTime = 100;
-  var timeout = null;
+  var debounceTimeout = null;
   var options = null;
   run();
 
@@ -16,14 +16,14 @@
   }
 
   function init() {
-    fullHeightSlider = $fullHeightSlider.royalSlider(options.defaultSlider).data('royalSlider');
+    fullHeightSlider = $fullHeightSlider.royalSlider(options.fullHeightSlider).data('royalSlider');
     $defaultSlider.royalSlider(options.defaultSlider);
     $visibleNearbySlider.flickity(options.visibleNearby);
   }
 
   function updateHeight() {
     if(fullHeightSlider != null) {
-      if($w.width() > 768) {
+      if($w.width() >= 768) {
         $fullHeightSlider.height($w.height() - 35 - 30);
         fullHeightSlider.updateSliderSize(true);
       }
@@ -43,8 +43,8 @@
   }
 
   function debounce(fn) {
-    if(timeout) clearTimeout(timeout);
-    timeout = setTimeout(fn, debounceTime);
+    if(debounceTimeout) clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(fn, debounceTime);
   }
 
   function setOptions() {
@@ -52,12 +52,29 @@
       "defaultSlider": {
         controlNavigation: 'none',
         imageScaleMode: 'fill',
+        // arrowsNav: false,
         arrowsNavAutoHide: true,
         keyboardNavEnabled: true,
         imageAlignCenter: true,
         transitionType: 'fade',
         loop: true,
-        globalCaption:true,
+        globalCaption: false,
+        autoPlay: {
+          enabled: true,
+          pauseOnHover: true,
+          delay: 3000,
+          stopAtAction: false,
+        }
+      },
+      "fullHeightSlider": {
+        controlNavigation: 'none',
+        imageScaleMode: 'fill',
+        arrowsNavAutoHide: true,
+        keyboardNavEnabled: true,
+        imageAlignCenter: true,
+        transitionType: 'fade',
+        loop: true,
+        globalCaption: true,
         autoPlay: {
           enabled: true,
           pauseOnHover: true,
@@ -67,24 +84,18 @@
       },
       "visibleNearby": {
         setGallerySize: true,
-        initialIndex: 1, // might be changed to center carousel
-        // setGallerySize: false,
-        // resize: true,
+        initialIndex: 1,
         cellAlign: 'center',
         contain: true,
-        // // imagesLoaded: true,
-        // percentPosition: true,
         pageDots: false,
         bgLazyLoad: 1,
-        autoPlay: 3000,
+        autoPlay: false,
         arrowShape: { 
           x0: 10,
           x1: 60, y1: 50,
           x2: 65, y2: 50,
           x3: 15
         }
-        // lazyLoad: 1,
-        // adaptiveHeight: true
       }
     };
   }

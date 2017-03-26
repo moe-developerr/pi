@@ -17,12 +17,7 @@
 				<span>+961 5 957 357</span>
 			</a>
 			<div class="top-header-social-icons">
-				<div class="social-icons">
-					<a href="#" class="social-icon fa fa-facebook"></a>
-					<a href="#" class="social-icon fa fa-twitter"></a>
-					<a href="#" class="social-icon fa fa-google-plus"></a>
-					<a href="#" class="social-icon fa fa-pinterest"></a>
-				</div>
+				<?php include '/includes/social-icons.php'; ?>	
 			</div>
 		</div>
 	</div>

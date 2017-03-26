@@ -6,6 +6,6 @@
 	}
 
 	function init() {
-		$('.component-select').selectric();
+		$('.selectric-dropdown').selectric();
 	}
 })();

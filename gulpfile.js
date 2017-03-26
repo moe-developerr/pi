@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const sassGlob = require('gulp-sass-glob');
 const concat = require('gulp-concat');
-const minify = require('gulp-minify');
+const uglify = require('gulp-uglify');
 
 // location variables
 const location = {
@@ -55,7 +55,8 @@ function scripts() {
 	return gulp.src(location.scripts.src)
 		.pipe(sourcemaps.init())
 		.pipe(concat('scripts.min.js'))
-		.pipe(minify())
+		.pipe(uglify())
+		.on('error', swallowError)
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(location.scripts.dist))
     	.pipe(browserSync.stream());
@@ -83,4 +84,9 @@ function watch() {
 	watchMarkup();
 	watchStyles();
 	watchScripts();
+}
+
+function swallowError(error) {
+  console.log(error.toString());
+  this.emit('end');
 }

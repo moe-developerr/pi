@@ -10,22 +10,39 @@ $screen-lg-min: 1200px;
 $body-ff: 'Raleway', sans-serif;
 $heading-ff: 'Pacifico', cursive;
 
-$body-fz: 16px;
-$md-fz: 14px;
+$body-fz: 13px;
 $sm-fz: 12px;
+
+$h1-fz: 2em;
+$h2-fz: 1.5em;
+$h3-fz: 1.17em;
+$h4-fz: 1em;
+$h5-fz: 0.83em;
+$h6-fz: 0.67em;
 
 // colors
 $lighter-grey: #ced0d1;
 $lighter-grey-l-10: lighten($lighter-grey, 10%);
+$lighter-grey-d-10: darken($lighter-grey, 10%);
 $light-grey: #959a9d;
+$light-grey-l-10: lighten($light-grey, 10%);
+$light-grey-d-10: darken($light-grey, 10%);
 $grey: #8e9193;
+$grey-l-10: lighten($grey, 10%);
+$grey-d-10: darken($grey, 10%);
 $dark-grey: #686868;
+$dark-grey-l-10: lighten($dark-grey, 10%);
+$dark-grey-d-10: darken($dark-grey, 10%);
 
 $lighter-blue: #5a6ca2;
 $lighter-blue-l-10: lighten($lighter-blue, 10%);
+$lighter-blue-d-10: darken($lighter-blue, 10%);
 $light-blue: #9db3f5;
 $light-blue-l-10: lighten($light-blue, 10%);
+$light-blue-d-10: darken($light-blue, 10%);
 $blue: #233b83;
+$blue-l-10: lighten($blue, 10%);
+$blue-d-10: darken($blue, 10%);
 
 $white: #fff;
 
@@ -37,3 +54,4 @@ $c: 15px;
 
 // transition
 $slow-transition: .6s;
+$fast-transition: .3s;

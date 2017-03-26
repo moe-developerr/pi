@@ -1,5 +1,4 @@
 .main-menu {
-	font-size: $md-fz;
 	&-list,
 	&-sublist {
 		list-style-type: none;
@@ -41,7 +40,6 @@
 			font-size: 0;
 		}
 		&-language-link {
-			font-size: $md-fz;
 			width: 50%;
 			display: inline-block;
 			border-bottom: 1px solid;

@@ -34,7 +34,7 @@ var aside = (function ($w) {
 	}
 
 	function toggleAsidePosition() {
-		if($w.width() > 768) {
+		if($w.width() >= 768) {
 			var scrollTop = $w.scrollTop();
 			var windowHeight = $w.height();
 			var asideHeight = $aside.innerHeight();

@@ -1,0 +1,31 @@
+.mini-panel {
+	margin-bottom: 2*$c;
+
+	&-image-wrapper,
+	&-text-wrapper {
+		float: left;
+	}
+
+	&-title {
+		color: $blue;
+		font-size: $h3-fz;
+		font-weight: 600;
+		margin-bottom: $c;
+	}
+
+	@include respond-to('xs') {
+		&-image-wrapper { margin-bottom: $c; }
+	}
+	@include respond-to('sm-p') {
+		&-image-wrapper {
+			width: 20%;
+			text-align: center;
+			padding-right: $c;
+		}
+
+		&-text-wrapper {
+			width: 80%;
+			padding-left: $c;
+		}
+	}
+}
