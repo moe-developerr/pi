@@ -12,7 +12,7 @@
 		<?php include './includes/aside.php'; ?>
 		<main class="main">
 			<section class="section">
-				<div class="slider light-arrows full-height-slider rsDefault">
+				<div class="slider light-arrows full-height-slider rsDefault" data-subtracted-height="75">
 					<div class="slide rsContent">
 						<a class="rsImg" href="/assets/images/top-slider-home.jpg"></a>
 						<figure class="rsCaption">

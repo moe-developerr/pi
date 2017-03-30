@@ -18,8 +18,8 @@
 				<div class="line-through-title margin-bot">
 					<hr class="line">
 					<div class="titles">
-						<div class="title">BANK FACILITIES</div>
-						<div class="subtitle">We take good care of you</div>
+						<div class="title">INTERNATION PRESENCE</div>
+						<div class="subtitle">Your Next Neighbour</div>
 					</div>
 				</div>
 				<div class="cards clearfix">
@@ -107,24 +107,24 @@
 				<div class="line-through-title margin-bot">
 					<hr class="line">
 					<div class="titles">
-						<div class="title">BANK FACILITIES</div>
-						<div class="subtitle">We take good care of you</div>
+						<div class="title">LET US KNOW YOUR CONCERNS</div>
+						<div class="subtitle">We will be glad to assist</div>
 					</div>
 				</div>
-				<form class="contact-form">
+				<form class="contact-form clearfix">
 					<div class="contact-form-horizontal-group">
 						<div class="element-wrapper">
-							<input type="text" class="contact-form-input full-name">
+							<input type="text" class="contact-form-input full-name" placeholder="FULL NAME" required="required">
 						</div>
 						<div class="element-wrapper">
-							<input type="email" class="contact-form-input email">
+							<input type="email" class="contact-form-input email" placeholder="EMAIL" required="required">
 						</div>
 						<div class="element-wrapper">
-							<input type="text" class="contact-form-input phone">
+							<input type="text" class="contact-form-input phone" placeholder="PHONE">
 						</div>
 						<div class="element-wrapper">
 							<select name="" id="" class="contact-form-input selectric-dropdown country">
-								<option value="">COUNTRY</option>
+								<option value="" disabled>COUNTRY</option>
 								<option value="LEBANON">LEBANON</option>
 								<option value="EGYPT">EGYPT</option>
 								<option value="CYPRUS">CYPRUS</option>
@@ -132,9 +132,9 @@
 						</div>
 					</div>
 					<div class="contact-form-horizontal-group">
-						<textarea name="" id="" cols="30" rows="10" class="contact-form-textarea message"></textarea>
+						<textarea name="" id="" cols="30" rows="10" class="contact-form-textarea message" placeholder="MESSAGE" required="required"></textarea>
 					</div>
-					<div>
+					<div class="clearfix">
 						<button class="contact-form-submit">SEND</button>
 						<div class="feedback"></div>
 					</div>
@@ -143,6 +143,8 @@
 		</main>
 		<?php include './includes/footer.php'; ?>
 		<?php include './includes/scripts.php'; ?>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3QPh-y7Mhz2XrOtVg4hY5clsamIZcUtk&callback=googleMap.init">
+    </script>
 	</div>
 </body>
 </html>

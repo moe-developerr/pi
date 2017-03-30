@@ -1,0 +1,40 @@
+.boxes {
+	.box-title {
+		color: $blue;
+		font-weight: 600;
+		font-size: 16px;
+		text-align: center;
+		margin-top: $c;
+	}
+	.box-image-wrapper {
+		min-height: 200px;
+		background-image: url('/assets/images/blog.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.box-wrapper {
+		margin-bottom: 2*$c;
+	}
+	.box {
+		padding: 20px 20px 10px 20px;
+		background-color: $lighter-grey-l-10;
+	}
+	@include respond-to('sm') {
+		.box-wrapper {
+			float: left;
+			width: 49%;
+			margin-bottom: 1.5%;
+			&:nth-child(n) { margin-right: 1.5%; }
+			&:nth-child(2n) { margin-right: 0; }
+		}
+	}
+	@include respond-to('md-p') {
+		.box-wrapper {
+			float: left;
+			width: 32.33%;
+			&:nth-child(n) { margin-right: 1.5%; }
+			&:nth-child(3n) { margin-right: 0; }
+		}
+	}
+}

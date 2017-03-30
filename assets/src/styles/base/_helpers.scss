@@ -20,7 +20,15 @@
 	&-12 { font-size: 12px; }
 	&-14 { font-size: 14px; }
 	&-16 { font-size: 16px; }
+	&-18 { font-size: 18px; }
+	&-20 { font-size: 20px; }
+	&-22 { font-size: 22px; }
+	&-24 { font-size: 24px; }
 	&-25 { font-size: 25px; }
+}
+
+.fw {
+	&-600 { font-weight: 600; }
 }
 
 .lh {
@@ -48,6 +56,18 @@
 	@include d('l15') { margin-left: $c; }
 	@include d('t15') { margin-top: $c; }
 	@include d('b15') { margin-bottom: $c; }
+
+	@include d('20') { margin: 4*$sm-c; }
+	@include d('r20') { margin-right: 4*$sm-c; }
+	@include d('l20') { margin-left: 4*$sm-c; }
+	@include d('t20') { margin-top: 4*$sm-c; }
+	@include d('b20') { margin-bottom: 4*$sm-c; }
+
+	@include d('25') { margin: 5*$sm-c; }
+	@include d('r25') { margin-right: 5*$sm-c; }
+	@include d('l25') { margin-left: 5*$sm-c; }
+	@include d('t25') { margin-top: 5*$sm-c; }
+	@include d('b25') { margin-bottom: 5*$sm-c; }
 }
 
 .p {

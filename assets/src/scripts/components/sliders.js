@@ -24,7 +24,7 @@
   function updateHeight() {
     if(fullHeightSlider != null) {
       if($w.width() >= 768) {
-        $fullHeightSlider.height($w.height() - 35 - 30);
+        $fullHeightSlider.height($w.height() - (+$fullHeightSlider.attr('data-subtracted-height')));
         fullHeightSlider.updateSliderSize(true);
       }
       else {

@@ -1,0 +1,80 @@
+.contact-form {
+	.contact-form-input,
+	.contact-form-textarea,
+	.selectric-contact-form-input .selectric {
+		border: none;
+		outline: none;
+	}
+	
+	.contact-form-input,
+	.contact-form-textarea,
+	.selectric-contact-form-input .selectric,
+	.selectric-contact-form-input .button {
+		background-color: $lighter-grey-l-10;
+	}
+
+	.contact-form-input,
+	.contact-form-textarea {
+		padding: 10px 5px;
+		width: 100%;
+		&:focus {
+			background-color: $blue;
+			color: $white;
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			  color: $white;
+			}
+			&::-moz-placeholder { /* Firefox 19+ */
+			  color: $white;
+			}
+			&:-ms-input-placeholder { /* IE 10+ */
+			  color: $white;
+			}
+			&:-moz-placeholder { /* Firefox 18- */
+			  color: $white;
+			}
+		}
+	}
+
+	.contact-form-textarea {
+		height: 185px;
+	}
+	
+	.element-wrapper {
+		margin-bottom: $c;
+	}
+
+	.contact-form-submit {
+		cursor: pointer;
+		float: right;
+		border: none;
+		padding: 10px 40px;
+		background-color: $blue;
+		color: $white;
+		margin-top: $c;
+		margin-left: $c;
+		transition: background-color $slow-transition;
+		&:hover {
+			background-color: $blue-l-10;
+		}
+		&[disabled] {
+			background-color: $lighter-grey;
+		}
+	}
+
+	.feedback {
+		color: $blue;
+		margin-top: 2*$c - 5px;
+		text-align: right;
+		float: right;
+		font-weight: 600;
+	}
+
+	@include respond-to('sm-p') {
+		.contact-form-horizontal-group {
+			float: left;
+			width: 50%;
+			&:nth-child(odd) { padding-right: $c; }
+			&:nth-child(even) { padding-left: $c; }
+		}
+	}
+}
