@@ -83,6 +83,7 @@ body {
 	text-transform: uppercase;
 	@include respond-to('xs') {
 		&-language-link {
+			font-size: $body-fz;
 			border-bottom-color: $lighter-blue;
 			color: $lighter-blue;
 			&:hover,

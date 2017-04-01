@@ -2,6 +2,7 @@
   var $fullHeightSlider = $('.full-height-slider');
   var $visibleNearbySlider = $('.visible-nearby-slider');
   var $defaultSlider = $('.default-slider');
+  var $gallerSlider = $('.gallery');
   var fullHeightSlider = null;
   var debounceTime = 100;
   var debounceTimeout = null;
@@ -18,7 +19,8 @@
   function init() {
     fullHeightSlider = $fullHeightSlider.royalSlider(options.fullHeightSlider).data('royalSlider');
     $defaultSlider.royalSlider(options.defaultSlider);
-    $visibleNearbySlider.flickity(options.visibleNearby);
+    $visibleNearbySlider.flickity(options.visibleNearbySlider);
+    $gallerSlider.royalSlider(options.gallerySlider);
   }
 
   function updateHeight() {
@@ -82,7 +84,7 @@
           stopAtAction: false,
         }
       },
-      "visibleNearby": {
+      "visibleNearbySlider": {
         setGallerySize: true,
         initialIndex: 1,
         cellAlign: 'center',
@@ -95,6 +97,24 @@
           x1: 60, y1: 50,
           x2: 65, y2: 50,
           x3: 15
+        }
+      },
+      "gallerySlider": {
+        controlNavigation: 'thumbnails',
+        loop: true,
+        imageScaleMode: 'fill',
+        navigateByClick: true,
+        numImagesToPreload: 2,
+        arrowsNav: false,
+        keyboardNavEnabled: true,
+        fadeinLoadedSlide: true,
+        globalCaption: false,
+        globalCaptionInside: false,
+        thumbs: {
+          appendSpan: true,
+          firstMargin: false,
+          paddingBottom: 0,
+          spacing: 10
         }
       }
     };

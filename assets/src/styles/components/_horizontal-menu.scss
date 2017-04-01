@@ -4,9 +4,185 @@
 		list-style-type: none;
 		padding-left: 0;
 	}
-
 	&-link,
 	&-sublink {
+		display: block;
+	}
+
+	@include respond-to('upto-md') {
+		text-align: center;
+
+		&-selected-link {
+			position: relative;
+			cursor: pointer;
+			margin-bottom: 10px;
+			background-color: $lighter-grey-l-10;
+			color: $blue;
+			padding: 10px;
+			
+			&.selected {
+				margin-bottom: 0;
+				& + .horizontal-menu-list {
+					display: block;
+				}
+				.horizontal-menu-down-arrow { display: none; }
+				.horizontal-menu-up-arrow { display: inline-block; }
+			}
+		}
+
+		&-list {
+			display: none;
+			margin: 0;
+			margin-bottom: 10px;
+		}
 		
+		&-up-arrow {
+			display: none;
+		}
+
+		&-item {
+			cursor: pointer;
+			position: relative;
+		}
+
+		&-item.selected &-sublist {
+			display: block;
+		}
+
+		&-sublist,
+		&-item.not-selected {
+			display: none;
+		}
+
+		&-down-arrow,
+		&-up-arrow {
+			position: absolute;
+			right: 10px;
+		}
+
+		&-link,
+		&-sublink {
+			border-bottom: 1px solid $lighter-blue;
+			color: $white;
+			padding: 10px;
+		}
+		
+		&-link {
+			background-color: $blue;
+		}
+
+		&-sublink {
+			background-color: $lighter-blue-l-10;
+		}
+
+
+		&-item.selected {
+			.horizontal-menu-up-arrow {
+				display: inline-block;
+			}
+			.horizontal-menu-down-arrow {
+				display: none;
+			}
+		}
+
+		&-item.selected &-link,
+		&-link:hover {
+			background-color: $lighter-grey-l-10;
+			color: $blue;
+		}
+
+		&-subitem.selected &-sublink,
+		&-sublink:hover {
+			background-color: $lighter-blue;
+		}
+	}
+
+	@include respond-to('lg') {
+		border-bottom: 1px solid $lighter-grey;
+		text-align: center;
+		margin-bottom: 10px;
+		
+		&-selected-link { display: none; }
+
+		&-down-arrow,
+		&-up-arrow {
+			margin-left: 10px;
+		}
+
+		&-up-arrow {
+			display: none;
+		}
+
+		&-list {
+			position: relative;
+			display: inline-block;
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+
+		&-item.selected &-link,
+		&-link:hover {
+			background-color: $blue;
+			color: $white;
+		}
+		
+		&-item.selected {
+			.horizontal-menu-up-arrow {
+				display: inline-block;
+			}
+			.horizontal-menu-down-arrow {
+				display: none;
+			}
+			.horizontal-menu-sublist { display: block; }
+		}
+
+		&-link,
+		&-sublink {
+			text-align: left;
+			color: inherit;
+		}
+
+		&-link:hover {
+			background-color: $blue;
+			color: $white;
+		}
+
+		&-sublist {
+			display: none;
+			position: absolute;
+			z-index: 100;
+		}
+
+		&-subitem {
+			&.selected {
+				.horizontal-menu-sublink {
+					background-color: $grey;
+					color: $white;
+				}
+			}
+		}
+
+		&-sublink {
+			background-color: $lighter-grey-l-10;
+			&:hover {
+				background-color: $grey;
+				color: $white;
+			}
+		}
+		&-item {
+			cursor: pointer;
+			float: left;
+		}
+		&-link,
+		&-sublink {
+			padding: 10px 20px;
+		}
+	}
+
+	@media all and (min-width: 1350px) {
+		&-link,
+		&-sublink {
+			padding: 10px 30px;
+		}
 	}
 }

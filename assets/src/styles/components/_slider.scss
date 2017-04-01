@@ -31,12 +31,83 @@
 			border-bottom: 1px solid $white;
 		}
 	}
+	
+	&.gallery {
+		.rsNav {
+			margin-top: 10px;
+		}
+		.rsThumbsHor {
+			margin-right: 10px;
+			height: 72px;
+		}
+		.rsThumb.rsNavSelected {
+			background-color: $blue;
+		}
+		.rsThumbsArrow {
+			background-color: rgba($white, 0.75);
+			width: 60px;
+			transition: background-color $fast-transition;
+			&:hover {
+				background-color: $white;
+			}
+		}
+		.rsThumb {
+			width: 140px;
+			height: 80px;
+		}
+		.rsThumbsArrowIcn {
+			background-image: none;
+			&:before,
+			&:after {
+				content: '';
+				width: 3px;
+				height: 40px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				background-color: $blue;
+			}
+		}
+		.rsThumbsArrow.rsThumbsArrowRight {
+			.rsThumbsArrowIcn {
+				margin-left: -22px;
+				&:before {
+					transform: rotate(-45deg) translate(38px, -11px);
+				}
+				&:after {
+					transform: rotate(45deg) translate(9px, -18px);
+				}
+			}
+		}
+		.rsThumbsArrow.rsThumbsArrowLeft {
+			.rsThumbsArrowIcn {
+				margin-left: -48px;
+				&:before {
+					transform: rotate(-45deg) translate(39px, 28px);
+				}
+				&:after {
+					transform: rotate(45deg) translate(8px, -58px);
+				}
+			}
+		}
+	}
+
 	@include respond-to('xs') {
-		height: 300px;
+		&:not(.gallery) {
+			height: 300px;
+		}
+		&.gallery {
+			height: 400px;
+		}
 	}
 
 	@include respond-to('sm-p') {
-		height: 500px;
+		&:not(.gallery) {
+			height: 500px;
+		}
+		&.gallery {
+			height: 600px;
+		}
 	}
 
 	&,

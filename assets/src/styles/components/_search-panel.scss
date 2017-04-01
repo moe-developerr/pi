@@ -17,10 +17,16 @@
 		height: 100%;
 		background-color: rgba($blue, 0.9);
 		padding: 20px;
+		z-index: 1;
 
 		&.active { display: block; }
 
-		&-footer { margin-top: 2*$c; }
+		&-footer {
+			margin-top: 2*$c;
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+		}
 
 		.feedback {
 			color: $white;
@@ -57,11 +63,16 @@
 			.label {
 				color: #fff;
 				margin: 0;
+				height: 25px;
+				line-height: 25px;
+			}
+			.selectric-items li {
+			    padding: 5px 10px;
 			}
 			.button {
-				height: 30px;
-			    width: 30px;
-			    line-height: 30px;
+				height: 25px;
+			    width: 25px;
+			    line-height: 25px;
 				background: transparent;
 				bottom: 0;
 				top: auto;
@@ -164,7 +175,6 @@
 	    background: $blue;
 	    padding: 8px 30px;
 	    cursor: pointer;
-	    margin-bottom: $c;
 	    transition: background-color $slow-transition;
 	    &:last-child { margin-left: 15px; }
 	    &:hover { background-color: $blue-l-10; }
@@ -183,6 +193,19 @@
 		&-form-textarea {
 			padding: 10px 0;
 		}
+
+		&.without-image {
+			min-height: 295px;
+			padding-bottom: 70px;
+			
+			.search-panel-text-wrapper { padding-left: 0; }
+			.search-panel-footer {
+				position: absolute;
+		    	right: 20px;
+		    	bottom: 20px;
+			}
+			.search-panel-text-wrapper { padding-left: 0; }
+		}
 	}
 
 	@include respond-to('lg') {
@@ -197,14 +220,28 @@
 			height: 25px;
 			line-height: 25px;
 		}
+
+		&.without-image {
+			min-height: 265px;
+			padding-bottom: 70px;
+
+			.search-panel-text-wrapper { padding-left: 0; }
+			.search-panel-footer {
+				position: absolute;
+		    	right: 20px;
+		    	bottom: 20px;
+			}
+		}
+
+		&:not(.without-image) {
+			.search-panel-text-wrapper { padding-left: 0.5*$c; }
+			.search-panel-image-wrapper { padding-right: 0.5*$c; }
 			
-		&-image-wrapper { padding-right: 0.5*$c; }
-		&-text-wrapper { padding-left: 0.5*$c; }
-		
-		&-image-wrapper,
-		&-text-wrapper {
-			float: left;
-			width: 50%;
+			.search-panel-image-wrapper,
+			.search-panel-text-wrapper {
+				float: left;
+				width: 50%;
+			}
 		}
 	}
 }

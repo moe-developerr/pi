@@ -16,6 +16,23 @@
 	vertical-align: middle;
 }
 
+.row {
+	.col-sm-6 {
+		@include respond-to('sm-p') {
+			float: left;
+			width: 50%;
+			&:nth-child(odd) { padding-right: $c; }
+			&:nth-child(even) { padding-left: $c; }
+		}
+	}
+}
+
+.d {
+	&-b { display: block; }
+	&-ib { display: inline-block; }
+	&-i { display: inline; }
+}
+
 .fz {
 	&-12 { font-size: 12px; }
 	&-14 { font-size: 14px; }
@@ -68,6 +85,12 @@
 	@include d('l25') { margin-left: 5*$sm-c; }
 	@include d('t25') { margin-top: 5*$sm-c; }
 	@include d('b25') { margin-bottom: 5*$sm-c; }
+
+	@include d('30') { margin: 2*$c; }
+	@include d('r30') { margin-right: 2*$c; }
+	@include d('l30') { margin-left: 2*$c; }
+	@include d('t30') { margin-top: 2*$c; }
+	@include d('b30') { margin-bottom: 2*$c; }
 }
 
 .p {
@@ -77,7 +100,7 @@
 	@include d('t5') { padding-top: $sm-c; }
 	@include d('b5') { padding-bottom: $sm-c; }
 
-	@include d('b10') { padding-bottom: 2*$sm-c; }
+	@include d('10') { padding: 2*$sm-c; }
 	@include d('r10') { padding-right: 2*$sm-c; }
 	@include d('l10') { padding-left: 2*$sm-c; }
 	@include d('t10') { padding-top: 2*$sm-c; }

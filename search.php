@@ -42,7 +42,7 @@
 								<div class="search-panel-form-element-wrapper">
 									<textarea type="text" placeholder="Notes" required="required" class="search-panel-form-textarea message"></textarea>
 								</div>
-								<footer class="search-panel-form-element-wrapper search-panel-form-footer">
+								<footer class="search-panel-form-footer">
 									<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
 									<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
 									<div class="feedback"></div>
@@ -91,7 +91,7 @@
 								<div class="search-panel-form-element-wrapper">
 									<textarea type="text" placeholder="Notes" required="required" class="search-panel-form-textarea message"></textarea>
 								</div>
-								<footer class="search-panel-form-element-wrapper search-panel-form-footer">
+								<footer class="search-panel-form-footer">
 									<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
 									<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
 									<div class="feedback"></div>
@@ -140,7 +140,7 @@
 								<div class="search-panel-form-element-wrapper">
 									<textarea type="text" placeholder="Notes" required="required" class="search-panel-form-textarea message"></textarea>
 								</div>
-								<footer class="search-panel-form-element-wrapper search-panel-form-footer">
+								<footer class="search-panel-form-footer">
 									<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
 									<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
 									<div class="feedback"></div>
@@ -189,7 +189,7 @@
 								<div class="search-panel-form-element-wrapper">
 									<textarea type="text" placeholder="Notes" required="required" class="search-panel-form-textarea message"></textarea>
 								</div>
-								<footer class="search-panel-form-element-wrapper search-panel-form-footer">
+								<footer class="search-panel-form-footer">
 									<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
 									<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
 									<div class="feedback"></div>

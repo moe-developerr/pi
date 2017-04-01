@@ -8,8 +8,6 @@
 	}
 
 	@media all and (max-width: 600px) {
-		#beirutBtn,
-		#cannesBtn,
-		#newyorkBtn { display: none; }
+		.googleMapBtn { display: none; }
 	}
 }

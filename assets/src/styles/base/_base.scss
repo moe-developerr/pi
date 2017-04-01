@@ -25,6 +25,18 @@ a {
 	text-decoration: none;
 }
 
+.page-title {
+	text-align: center;
+	color: $blue;
+	@include respond-to('xs') {
+		font-size: 2em;
+		margin-top: 0;
+	}
+	@include respond-to('sm-p') {
+		margin-top: 10px;
+	}
+}
+
 .title {
 	color: $blue;
 	text-align: center;

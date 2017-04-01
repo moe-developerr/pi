@@ -12,7 +12,7 @@
 		<?php include './includes/aside.php'; ?>
 		<main class="main">
 			<section class="section">
-				<div id="map"></div>
+				<div id="map" data-lat="33.8938" data-lng="35.5018" data-zoom="13"></div>
 			</section>
 			<section class="section">
 				<div class="line-through-title margin-bot">
@@ -143,8 +143,33 @@
 		</main>
 		<?php include './includes/footer.php'; ?>
 		<?php include './includes/scripts.php'; ?>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3QPh-y7Mhz2XrOtVg4hY5clsamIZcUtk&callback=googleMap.init">
-    </script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3QPh-y7Mhz2XrOtVg4hY5clsamIZcUtk&callback=initGoogleMap"></script>
+		<script>
+			function initGoogleMap() {
+				googleMap.init();
+				googleMap.addButton({
+					position: {lat: 33.8938, lng: 35.5018},
+					name: 'BEIRUT - LEBANON'
+				});
+				googleMap.addButton({
+					position: {lat: 43.5528, lng: 7.0174},
+					name: 'CANNES - FRANCE'
+				});
+				googleMap.addButton({
+					position: {lat: 37.0902, lng: 95.7129},
+					name: 'NEW YORK - USA'
+				});
+				googleMap.addMarker({
+					position: {lat: 33.8938, lng: 35.5018}
+				});
+				googleMap.addMarker({
+					position: {lat: 43.5528, lng: 7.0174}
+				});
+				googleMap.addMarker({
+					position: {lat: 37.0902, lng: 95.7129}
+				});
+			}
+		</script>
 	</div>
 </body>
 </html>

@@ -1,4 +1,6 @@
 var googleMap = (function () {
+	var map = null;
+	var $map = $('#map');
 	var googleMapStyles = [
 	    {
 	        "featureType": "water",
@@ -184,75 +186,30 @@ var googleMap = (function () {
 	        ]
 	    }
 	];
-	var beirut = {
-		position: {lat: 33.8938, lng: 35.5018},
-		title: 'Click to go to Beirut',
-		text: 'BEIRUT - LEBANON',
-		id: 'beirutBtn'
-	}
-	var cannes = {
-		position: {lat: 43.5528, lng: 7.0174},
-		title: 'Click to go to Cannes',
-		text: 'CANNES - FRANCE',
-		id: 'cannesBtn'
-	}
-	var newyork = {
-		position: {lat: 37.0902, lng: 95.7129},
-		title: 'Click to go to New York',
-		text: 'NEW YORK - USA',
-		id: 'newyorkBtn'
-	}
 
 	function init() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: beirut.position,
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: +$map.attr('data-zoom'),
+          center: { lat: +$map.attr('data-lat'), lng: +$map.attr('data-lng') },
           styles: googleMapStyles
         });
-        var marker = new google.maps.Marker({
-          position: beirut.position,
-          map: map,
-          icon: '/assets/images/pin.png',
-        });
-        var marker = new google.maps.Marker({
-          position: cannes.position,
-          map: map,
-          icon: '/assets/images/pin.png',
-        });
-        var marker = new google.maps.Marker({
-          position: newyork.position,
-          map: map,
-          icon: '/assets/images/pin.png',
-        });
-        positionBtns(map);
 	}
 
-	function initBeirut() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: beirut.position,
-          styles: googleMapStyles
-        });
-        var marker = new google.maps.Marker({
-          position: beirut.position,
+	function addButton(area) {
+		var btn = document.createElement('div');
+        new Btn(btn, map, area);
+        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(btn);
+	}
+
+	function addMarker(area) {
+		var marker = new google.maps.Marker({
+          position: area.position,
           map: map,
           icon: '/assets/images/pin.png',
         });
 	}
 
-	function positionBtns(map) {
-		var btn1 = document.createElement('div');
-        var btn2 = document.createElement('div');
-        var btn3 = document.createElement('div');
-        new CenterControl(btn1, map, beirut);
-        new CenterControl(btn2, map, cannes);
-        new CenterControl(btn3, map, newyork);
-        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(btn1);
-        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(btn2);
-        map.controls[google.maps.ControlPosition.TOP_RIGHT].push(btn3);
-	}
-
-	function CenterControl(controlDiv, map, area) {
+	function Btn(btn, map, area) {
 		var controlUI = document.createElement('div');
 		controlUI.style.backgroundColor = '#686868';
 		controlUI.style.cursor = 'pointer';
@@ -260,9 +217,8 @@ var googleMap = (function () {
 		controlUI.style.marginRight = '15px';
 		controlUI.style.marginTop = '15px';
 		controlUI.style.textAlign = 'center';
-		controlUI.title = area.title;
-		controlUI.id = area.id;
-		controlDiv.appendChild(controlUI);
+		controlUI.className = 'googleMapBtn';
+		btn.appendChild(controlUI);
 
 		var controlText = document.createElement('div');
 		controlText.style.color = '#fff';
@@ -271,7 +227,7 @@ var googleMap = (function () {
 		controlText.style.lineHeight = '38px';
 		controlText.style.paddingLeft = '20px';
 		controlText.style.paddingRight = '20px';
-		controlText.innerHTML = area.text;
+		controlText.innerHTML = area.name;
 		controlUI.appendChild(controlText);
 
 		controlUI.addEventListener('click', function() {
@@ -281,7 +237,8 @@ var googleMap = (function () {
 
 	return {
 		init: init,
-		initBeirut: initBeirut
-	}
+		addButton: addButton,
+		addMarker: addMarker
+	};
 
 })();

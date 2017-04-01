@@ -1,0 +1,23 @@
+.video-container {
+	margin-bottom: 2*$c;
+
+	@include respond-to('lg') {
+		float: left;
+		width: 50%;
+
+		&:nth-child(odd) { padding-right: $c; }
+		&:nth-child(even) { padding-left: $c; }
+	}
+}
+
+.video-name {
+	color: $blue;
+	margin-bottom: $sm-c;
+	font-size: $h3-fz;
+	font-weight: 600;
+}
+
+.video-frame {
+	width: 100%;
+	height: 400px;
+}
