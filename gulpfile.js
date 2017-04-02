@@ -16,7 +16,7 @@ const location = {
 	},
 	scripts: {
 		src: [
-			'./node_modules/jquery/dist/jquery.min.js',
+			'./assets/src/scripts/vendors/jquery.js',
 			'./assets/src/scripts/vendors/flickity.js',
 			'./assets/src/scripts/vendors/**/*.js',
 			'./assets/src/scripts/components/**/*.js'

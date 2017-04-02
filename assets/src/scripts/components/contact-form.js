@@ -78,6 +78,7 @@
 			$feedback.text('');
 			enableSubmit();
 			clearContactForm();
+			placeholder.fix();
 		}, feedbackTime);
 	}
 })();

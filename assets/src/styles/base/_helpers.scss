@@ -147,3 +147,47 @@
 	&-left { text-align: left; }
 	&-center { text-align: center; }
 }
+
+.trapezoid {
+	box-sizing: content-box;
+    border-bottom: 30px solid #c30000;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+	height: 0;
+    width: 60px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.selection-disabled {
+	 -webkit-touch-callout: none; /* iOS Safari */
+	    -webkit-user-select: none; /* Safari */
+	     -khtml-user-select: none; /* Konqueror HTML */
+	       -moz-user-select: none; /* Firefox */
+	        -ms-user-select: none; /* Internet Explorer/Edge */
+	            user-select: none; /* Non-prefixed version, currently
+	                                  supported by Chrome and Opera */
+}
+
+.ov {
+	&-h { overflow: hidden; }
+}
+
+.checkbox {
+	display: inline-block;
+	vertical-align: middle;
+	height: 12px;
+	width: 12px;
+	border: 2px solid $white;
+	border-radius: 2px;
+
+	&-filling {
+		display: none;
+		background-color: $white;
+		height: 100%;
+	}
+}
+
+.cu {
+	&-p { cursor: pointer; }
+}

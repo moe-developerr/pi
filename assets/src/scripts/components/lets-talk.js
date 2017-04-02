@@ -83,6 +83,7 @@
 			enableSubmit($form);
 			clearContactForm($form);
 			hideForm($form);
+			placeholder.fix();
 		}, feedbackTime);
 	}
 

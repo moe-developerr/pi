@@ -1,0 +1,92 @@
+.filter-bar {
+	background-color: $blue;
+	color: $white;
+	padding: 5px 5px;
+	
+	.filter-checkbox {
+		display: none;
+		&:checked + .checkbox-filling { display: block; }
+	}
+
+	.selectric-filter-dropdown .selectric,
+	.selectric-filter-dropdown .label,
+	.selectric-filter-dropdown .button {
+		height: 30px;
+		line-height: 30px;
+		border: none;
+		color: $blue
+	}
+
+	.selectric-filter-dropdown .selectric {
+		min-width: 150px;
+	}
+
+	.selectric-filter-dropdown .button {
+		width: 30px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 11px;
+			left: 7px;
+			border-top: 8px solid $lighter-grey;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+		}
+		&:after {
+			top: 11px;
+			left: 9px;
+			margin: 0;
+			border-top: 6px solid $white;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+		}
+	}
+
+	.selectric-filter-dropdown .selectric-items li {
+		padding: 5px 10px;
+		color: $blue
+	}
+
+	@include respond-to('upto-md') {
+		.filter-elements-title {
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		.left-part {
+			margin-bottom: $c;
+		}
+
+		.filter-elements-wrapper {
+			margin-bottom: 5px;
+		}
+
+		.selectric-filter-dropdown {
+			max-width: 150px;
+		}
+	}
+
+	@include respond-to('lg') {
+		.left-part {
+			float: left;
+			height: 30px;
+			line-height: 30px;
+		}
+
+		.right-part {
+			float: right;
+		}
+		
+		.filter-elements-wrapper { margin-right: $c; }
+
+		.filter-elements-title {
+			margin-right: 10px;
+		}
+
+		.filter-elements-wrapper,
+		.selectric-filter-dropdown {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}

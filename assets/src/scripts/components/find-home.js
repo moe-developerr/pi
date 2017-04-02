@@ -62,7 +62,7 @@
 	}
 
 	function redirect() {
-		var url = '/results?location='+data.location+'&status='+data.status+'&priceStart='+data.priceStart+'&priceEnd='+data.priceEnd+'&areaStart='+data.areaStart+'&areaEnd='+data.areaEnd;;
+		var url = '/search?location='+data.location+'&status='+data.status+'&priceStart='+data.priceStart+'&priceEnd='+data.priceEnd+'&areaStart='+data.areaStart+'&areaEnd='+data.areaEnd;;
 		location.assign(url);
 	}
 })($(window));
