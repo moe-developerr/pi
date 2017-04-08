@@ -1,0 +1,24 @@
+body.landing-page {
+	.aside,
+	.top-header-smp,
+	.aside-show,
+	.horizontal-menu { display: none; }
+	.top-header { text-align: center; }
+	.top-header-logo { float: none; }
+	.site-wrapper { max-width: 1200px; margin: 0 auto; }
+	@include respond-to('sm-p') {
+		.top-header {
+			left: 30px;
+			right: 30px;
+		}
+		.top-header-xs {
+			display: block;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		.site-wrapper {
+			padding-left: 30px;
+			padding-top: 110px;
+		}
+	}
+}

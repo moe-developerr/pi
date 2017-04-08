@@ -3,6 +3,8 @@
 	background-color: $lighter-grey-l-10;
 	margin-bottom: 2*$c;
 
+	&.hide { display: none; }
+
 	.panel-image-wrapper,
 	.panel-image,
 	.panel-text-wrapper {
@@ -48,6 +50,7 @@
 
 	@include respond-to('sm-p') {
 		height: 350px;
+
 		.panel-image-wrapper,
 		.panel-text-wrapper {
 			float: left;

@@ -109,7 +109,7 @@
 			<li class="component-element-border-bottom white-c component-item p-b10">Add your email to receive our latest news offers</li>
 			<li class="component-item">
 				<label for="location" class="component-label">Full Name*</label>
-				<input type="text" class="component-input full-name" required>
+				<input type="text" class="component-input full-name" data-errormessage-value-missing="Full Name Is Required" required>
 			</li>
 			<li class="component-item">
 				<label for="location" class="component-label">Email *</label>

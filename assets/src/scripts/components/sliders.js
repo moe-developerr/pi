@@ -102,6 +102,9 @@
       "gallerySlider": {
         controlNavigation: 'thumbnails',
         loop: true,
+        autoScaleSlider: true,
+        autoScaleSliderWidth: 800,
+        autoScaleSliderHeight: 600,
         imageScaleMode: 'fill',
         navigateByClick: true,
         numImagesToPreload: 2,

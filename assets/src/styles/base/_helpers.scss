@@ -17,6 +17,8 @@
 }
 
 .row {
+	position: relative;
+	overflow: hidden;
 	.col-sm-6 {
 		@include respond-to('sm-p') {
 			float: left;
@@ -190,4 +192,46 @@
 
 .cu {
 	&-p { cursor: pointer; }
+}
+
+.full-height-col {
+	@include respond-to(xs) {
+		&-xs {
+			padding-bottom: 9999px;
+			margin-bottom: -9999px;
+		}
+	}
+	@include respond-to(sm-p) {
+		&-smp {
+			padding-bottom: 9999px;
+			margin-bottom: -9999px;
+		}
+	}
+}
+
+.ps {
+	@include respond-to('xs') {
+		&-a-xs { position: absolute; }
+	}
+	@include respond-to('sm-p') {
+		&-a-smp { position: absolute; }
+	}
+}
+
+.b {
+	@include respond-to('xs') {
+		&-0-xs { bottom: 0; }
+	}
+	@include respond-to('sm-p') {
+		&-0-smp { bottom: 0; }
+	}
+}
+
+.w {
+	@include respond-to('xs') {
+		&-50perc-xs { width: 50%; }
+	}
+	@include respond-to('sm-p') {
+		&-50perc-smp { width: 50%; }
+	}
 }

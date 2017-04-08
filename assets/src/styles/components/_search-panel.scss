@@ -24,6 +24,7 @@
 		&-footer {
 			margin-top: 2*$c;
 			position: absolute;
+			left: 20px;
 			right: 20px;
 			bottom: 20px;
 		}
@@ -46,8 +47,9 @@
 		    color: $blue;
 		    cursor: pointer;
 		    float: right;
-		    margin-left: $c;
 		    transition: background-color $slow-transition;
+		    &:first-of-type { margin-left: $c; }
+			// &:last-of-type { float: left; }
 		    &:hover {
 				background-color: $white-d-10;
 		    }
@@ -169,6 +171,7 @@
 	    background: $blue;
 	    cursor: pointer;
 	    transition: background-color $slow-transition;
+	    // &:first-child { float: left; }
 	    &:last-child { margin-left: 15px; }
 	    &:hover { background-color: $blue-l-10; }
 	}
@@ -197,8 +200,18 @@
 		&-wrapper {
 			width: 50%;
 			float: left;
-			&:nth-child(odd) { padding-right: $c; }
-			&:nth-child(even) { padding-left: $c; }
+			&:nth-child(odd) {
+				padding-right: $c;
+				clear: left;
+			}
+			&:nth-child(even) {
+				padding-left: $c;
+				clear: right;
+			}
+			&.left-right-padding {
+				padding-left: $c;
+				padding-right: $c;
+			}
 		}
 
 		.selectric-search-panel-form-select .label {
@@ -230,6 +243,7 @@
 		.search-panel-text-wrapper { padding-left: 0; }
 		.search-panel-footer {
 			position: absolute;
+	    	left: 20px;
 	    	right: 20px;
 	    	bottom: 20px;
 		}
@@ -241,6 +255,12 @@
 
 			&:nth-child(odd) { padding-right: $c; }
 			&:nth-child(even) { padding-left: $c; }
+
+			&:last-of-type {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 

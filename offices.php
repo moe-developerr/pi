@@ -43,7 +43,7 @@
 									</div>
 									<div>
 										<span class="card-subtitle">Email:</span>
-										<span>info@prideinvests.com</span>
+										<span><a href="mailto:info@prideinvests.com" class="dark-grey-c">info@prideinvests.com</a></span>
 									</div>
 									<div>
 										<span class="card-subtitle">Contact Person:</span>
@@ -69,7 +69,7 @@
 									</div>
 									<div>
 										<span class="card-subtitle">Email:</span>
-										<span>contact@prideofcotedazur.com</span>
+										<span><a href="mailto:contact@prideofcotedazur.com" class="dark-grey-c">contact@prideofcotedazur.com</a></span>
 									</div>
 									<div>
 										<span class="card-subtitle">Contact Person:</span>
@@ -95,7 +95,7 @@
 									</div>
 									<div>
 										<span class="card-subtitle">Email:</span>
-										<span>info@prideinvests.com</span>
+										<span><a href="mailto:info@prideinvests.com" class="dark-grey-c">info@prideinvests.com</a></span>
 									</div>
 									<div>
 										<span class="card-subtitle">Contact Person:</span>

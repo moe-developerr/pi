@@ -19,27 +19,35 @@
 						<div class="subtitle">Your Next Neighbour</div>
 					</div>
 				</div>
-
+				<div class="search-bar clearfix">
+					<div class="search-element-container">
+						<label for="search" class="search-label">SEARCH</label>
+						<div class="search-element-wrapper">
+							<input type="text" id="search" class="search-element blog-filter-element">
+							<i class="fa fa-search search-icon blog-filter-submit"></i>
+						</div>
+					</div>
+				</div>
 				<div class="panels clearfix">
-					<div class="panel">
+					<div class="panel blog">
 						<div class="panel-image-wrapper">
 							<div class="panel-image" style="background-image:url('/assets/images/blog.jpg')"></div>
 						</div>
 						<div class="panel-text-wrapper">
-							<div class="panel-title">REAL ESTATE IN BEIRUT</div>
-							<div class="panel-subtitle">25 January 2017</div>
-							<p>Pride of Mar Takla 2 combines Nature with True Luxury. From the Marble floor to the Panoramic Glass Elevators, every detail has been carefully selected to meet the highest standards possible….</p>
+							<div class="panel-title blog-title">First Blog Title</div>
+							<div class="panel-subtitle blog-subtitle">24 January 2016</div>
+							<div class="blog-text"><p>Second blog text</p></div>
 							<a href="#" class="panel-link edge-link">KNOW MORE</a>
 						</div>
 					</div>
-					<div class="panel">
+					<div class="panel blog">
 						<div class="panel-image-wrapper">
 							<div class="panel-image" style="background-image:url('/assets/images/blog.jpg')"></div>
 						</div>
 						<div class="panel-text-wrapper">
-							<div class="panel-title">REAL ESTATE IN BEIRUT</div>
-							<div class="panel-subtitle">25 January 2017</div>
-							<p>Pride of Mar Takla 2 combines Nature with True Luxury. From the Marble floor to the Panoramic Glass Elevators, every detail has been carefully selected to meet the highest standards possible….</p>
+							<div class="panel-title blog-title">Second Blog Title</div>
+							<div class="panel-subtitle blog-subtitle">25 January 2017</div>
+							<div class="blog-text"><p>First blog text</p></div>
 							<a href="#" class="panel-link edge-link">KNOW MORE</a>
 						</div>
 					</div>

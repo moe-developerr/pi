@@ -1,0 +1,32 @@
+.search-bar {
+	padding-top: $c;
+	padding-bottom: $c;
+	.search-element-container { float: right; }
+	.search-label,
+	.search-element-wrapper {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.search-element-wrapper {
+		border: 1px solid $lighter-grey;
+		padding: 5px;
+	}
+
+	.search-label {
+		color: $blue;
+		margin-right: $c;
+		font-weight: 600;
+	}
+
+	.search-element {
+		border: none;
+		&:focus { outline: none; }
+	}
+
+	.search-icon {
+		color: $blue;
+		font-size: $h3-fz;
+		cursor: pointer;
+	}
+}

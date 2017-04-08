@@ -5,6 +5,17 @@
 	<title>Homepage</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="/assets/dist/styles/styles.css">
+	<style>
+		@media all and (min-width:601px) and (max-width: 1200px) {
+			.search-panel-wrapper {
+				max-width: none;
+				width: 50%;
+				float: left;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	</style>
 </head>
 <body class="ov-h">
 	<section>
@@ -15,7 +26,7 @@
 			</div>
 		</div>
 		<div class="search-panels clearfix">
-			<div class="search-panel-wrapper without-image" data-available="true" data-terrace="true" data-duplex="true" data-simplex="false">
+			<div class="search-panel-wrapper without-image left-right-padding" data-available="true" data-terrace="true" data-duplex="true" data-simplex="false">
 				<div class="search-panel-inner-wrapper lets-talk-wrapper">
 					<form class="search-panel-form lets-talk-form">
 						<div class="search-panel-form-element-wrapper">
@@ -60,7 +71,189 @@
 					</div>
 				</div>
 			</div>
-			<div class="search-panel-wrapper without-image sold selection-disabled" data-available="false" data-terrace="false" data-duplex="false" data-simplex="true">
+			<div class="search-panel-wrapper without-image sold selection-disabled left-right-padding" data-available="false" data-terrace="false" data-duplex="false" data-simplex="true">
+				<div class="search-panel-inner-wrapper lets-talk-wrapper">
+					<div class="sold-banner trapezoid">SOLD</div>
+					<form class="search-panel-form lets-talk-form">
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Your Name" required="required" class="search-panel-form-input full-name">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="email" placeholder="Your Email" required="required" class="search-panel-form-input email">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Phone" class="search-panel-form-input phone">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<select name="" class="search-panel-form-select selectric-dropdown country">
+								<option value="Lebanon">Lebanon</option>
+								<option value="Egypt">Egypt</option>
+								<option value="Cyprus">Cyprus</option>
+							</select>
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Notes" required="required" class="search-panel-form-input message">
+						</div>
+						<footer class="search-panel-form-footer">
+							<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
+							<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
+							<div class="feedback"></div>
+						</footer>
+					</form>
+					<div class="search-panel clearfix">
+						<div class="search-panel-text-wrapper">
+							<h2 class="search-panel-title">Pride Of Mar Takla II</h2>
+							<h4 class="search-panel-sub-subtitle">Ground Floor</h4>
+							<p>
+								2 Master Bedrooms, Dining room <br>
+								Living room, Guest WC <br>
+								Kitchen with Maid's Quarter <br>
+							</p>
+						</div>
+						<footer class="search-panel-footer">
+							<button class="search-panel-footer-btn lets-talk-trigger">LET'S TALK</button>
+							<button class="search-panel-footer-btn floor-plans" data-srcs="/assets/images/beirut-at-night.jpg, /assets/images/top-slider-home.jpg" data-titles="title 1, title 2">FLOOR PLANS</button>
+						</footer>
+					</div>
+				</div>
+			</div>
+			<div class="search-panel-wrapper without-image left-right-padding" data-available="true" data-terrace="true" data-duplex="true" data-simplex="false">
+				<div class="search-panel-inner-wrapper lets-talk-wrapper">
+					<form class="search-panel-form lets-talk-form">
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Your Name" required="required" class="search-panel-form-input full-name">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="email" placeholder="Your Email" required="required" class="search-panel-form-input email">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Phone" class="search-panel-form-input phone">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<select name="" class="search-panel-form-select selectric-dropdown country">
+								<option value="Lebanon">Lebanon</option>
+								<option value="Egypt">Egypt</option>
+								<option value="Cyprus">Cyprus</option>
+							</select>
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Notes" required="required" class="search-panel-form-input message">
+						</div>
+						<footer class="search-panel-form-footer">
+							<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
+							<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
+							<div class="feedback"></div>
+						</footer>
+					</form>
+					<div class="search-panel clearfix">
+						<div class="search-panel-text-wrapper">
+							<h2 class="search-panel-title">Pride Of Mar Takla II</h2>
+							<h4 class="search-panel-sub-subtitle">Ground Floor</h4>
+							<p>
+								2 Master Bedrooms, Dining room <br>
+								Living room, Guest WC <br>
+								Kitchen with Maid's Quarter <br>
+							</p>
+						</div>
+						<footer class="search-panel-footer">
+							<button class="search-panel-footer-btn lets-talk-trigger">LET'S TALK</button>
+							<button class="search-panel-footer-btn floor-plans" data-srcs="/assets/images/beirut-at-night.jpg, /assets/images/top-slider-home.jpg" data-titles="title 1, title 2">FLOOR PLANS</button>
+						</footer>
+					</div>
+				</div>
+			</div>
+			<div class="search-panel-wrapper without-image sold selection-disabled left-right-padding" data-available="false" data-terrace="false" data-duplex="false" data-simplex="true">
+				<div class="search-panel-inner-wrapper lets-talk-wrapper">
+					<div class="sold-banner trapezoid">SOLD</div>
+					<form class="search-panel-form lets-talk-form">
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Your Name" required="required" class="search-panel-form-input full-name">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="email" placeholder="Your Email" required="required" class="search-panel-form-input email">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Phone" class="search-panel-form-input phone">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<select name="" class="search-panel-form-select selectric-dropdown country">
+								<option value="Lebanon">Lebanon</option>
+								<option value="Egypt">Egypt</option>
+								<option value="Cyprus">Cyprus</option>
+							</select>
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Notes" required="required" class="search-panel-form-input message">
+						</div>
+						<footer class="search-panel-form-footer">
+							<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
+							<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
+							<div class="feedback"></div>
+						</footer>
+					</form>
+					<div class="search-panel clearfix">
+						<div class="search-panel-text-wrapper">
+							<h2 class="search-panel-title">Pride Of Mar Takla II</h2>
+							<h4 class="search-panel-sub-subtitle">Ground Floor</h4>
+							<p>
+								2 Master Bedrooms, Dining room <br>
+								Living room, Guest WC <br>
+								Kitchen with Maid's Quarter <br>
+							</p>
+						</div>
+						<footer class="search-panel-footer">
+							<button class="search-panel-footer-btn lets-talk-trigger">LET'S TALK</button>
+							<button class="search-panel-footer-btn floor-plans" data-srcs="/assets/images/beirut-at-night.jpg, /assets/images/top-slider-home.jpg" data-titles="title 1, title 2">FLOOR PLANS</button>
+						</footer>
+					</div>
+				</div>
+			</div>
+			<div class="search-panel-wrapper without-image left-right-padding" data-available="true" data-terrace="true" data-duplex="true" data-simplex="false">
+				<div class="search-panel-inner-wrapper lets-talk-wrapper">
+					<form class="search-panel-form lets-talk-form">
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Your Name" required="required" class="search-panel-form-input full-name">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="email" placeholder="Your Email" required="required" class="search-panel-form-input email">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Phone" class="search-panel-form-input phone">
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<select name="" class="search-panel-form-select selectric-dropdown country">
+								<option value="Lebanon">Lebanon</option>
+								<option value="Egypt">Egypt</option>
+								<option value="Cyprus">Cyprus</option>
+							</select>
+						</div>
+						<div class="search-panel-form-element-wrapper">
+							<input type="text" placeholder="Notes" required="required" class="search-panel-form-input message">
+						</div>
+						<footer class="search-panel-form-footer">
+							<button type="button" class="search-panel-form-footer-btn lets-talk-cancel">CANCEL</button>
+							<button class="search-panel-form-footer-btn lets-talk-submit">SEND</button>
+							<div class="feedback"></div>
+						</footer>
+					</form>
+					<div class="search-panel clearfix">
+						<div class="search-panel-text-wrapper">
+							<h2 class="search-panel-title">Pride Of Mar Takla II</h2>
+							<h4 class="search-panel-sub-subtitle">Ground Floor</h4>
+							<p>
+								2 Master Bedrooms, Dining room <br>
+								Living room, Guest WC <br>
+								Kitchen with Maid's Quarter <br>
+							</p>
+						</div>
+						<footer class="search-panel-footer">
+							<button class="search-panel-footer-btn lets-talk-trigger">LET'S TALK</button>
+							<button class="search-panel-footer-btn floor-plans" data-srcs="/assets/images/beirut-at-night.jpg, /assets/images/top-slider-home.jpg" data-titles="title 1, title 2">FLOOR PLANS</button>
+						</footer>
+					</div>
+				</div>
+			</div>
+			<div class="search-panel-wrapper without-image sold selection-disabled left-right-padding" data-available="false" data-terrace="false" data-duplex="false" data-simplex="true">
 				<div class="search-panel-inner-wrapper lets-talk-wrapper">
 					<div class="sold-banner trapezoid">SOLD</div>
 					<form class="search-panel-form lets-talk-form">
@@ -109,16 +302,21 @@
 		</div>
 	</section>
 	<?php // include './includes/scripts.php'; ?>
-	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="/assets/src/scripts/vendors/jquery.js"></script>
 	<script src="/assets/src/scripts/vendors/jquery.selectric.js"></script>
 	<script>
-		(function () {
+		(function ($w) {
+			var debounceTimeout = 0;
+			var debounceTime = 100;
 			run();
 
 			function run() {
 				signalDocumentIsReady();
 				setIframeHeight();
 				attachEvents();
+				$w.resize(function () {
+					debounce(setIframeHeight);
+				});
 			}
 
 			function attachEvents() {
@@ -128,13 +326,18 @@
 			}
 
 			function setIframeHeight() {
-				parent.iframeController.setHeight($(document).height());
+				parent.iframeController.setHeight($('html').height());
 			}
 
 			function signalDocumentIsReady() {
 				parent.filter.onIframeDocumentReady();
 			}
-		})();
+
+			function debounce(fn) {
+				clearTimeout(debounceTimeout);
+				debounceTimeout = setTimeout(fn, debounceTime);
+			}
+		})($(window));
 	</script>
 	<script>
 		$('.selectric-dropdown').selectric();
